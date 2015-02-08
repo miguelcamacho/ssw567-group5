@@ -23,7 +23,7 @@ public class SSW567_Triangle {
     private static void getSideA() {
         try {
             sidea = Double.valueOf(JOptionPane.showInputDialog("Enter side 1 of the Triangle (eg. 1.0, 2.5, etc)"));
-            while (sidea == 0) {
+            while (sidea <= 0) {
                 sidea = Double.valueOf(JOptionPane.showInputDialog("Side 1 has to be greater than 0!"
                         + "\n Please enter side 1 of the Triangle (eg. 1.0, 2.5, etc)"));
             }
@@ -38,7 +38,7 @@ public class SSW567_Triangle {
     private static void getSideB() {
         try {
             sideb = Double.valueOf(JOptionPane.showInputDialog("Enter side 2 of the Triangle (eg. 1.0, 2.5, etc)"));
-            while (sideb == 0) {
+            while (sideb <= 0) {
                 sideb = Double.valueOf(JOptionPane.showInputDialog("Side 2 has to be greater than 0!"
                         + "\n Please enter side 2 of the Triangle (eg. 1.0, 2.5, etc)"));
             }
@@ -53,7 +53,7 @@ public class SSW567_Triangle {
     private static void getSideC() {
         try {
             sidec = Double.valueOf(JOptionPane.showInputDialog("Enter side 3 of the Triangle (eg. 1.0, 2.5, etc)"));
-            while (sidec == 0) {
+            while (sidec <= 0) {
                 sidec = Double.valueOf(JOptionPane.showInputDialog("Side 3 has to be greater than 0!"
                         + "\n Please enter side 3 of the Triangle (eg. 1.0, 2.5, etc)"));
             }

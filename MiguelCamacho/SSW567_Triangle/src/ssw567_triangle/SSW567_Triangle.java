@@ -92,17 +92,23 @@ public class SSW567_Triangle {
                 getSideC();
             }
 
-            if (sidea.equals(sideb) && sideb.equals(sidec)) {
-                message = "This is an Equilaterial Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
-            } else if ((sidea.equals(sideb) && !sidea.equals(sidec)) || (sidea.equals(sidec) && !sidea.equals(sideb)) || (sideb.equals(sidec) && !sideb.equals(sidea))) {
-                message = "This is an Isosceles Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
-            } else if (!sidea.equals(sideb) && !sidea.equals(sidec) && !sideb.equals(sidec)) {
-                message = "This is a Scalene Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
-            }
-            isRightTriangle();
+            if ((sidea + sideb) < sidec || (sideb + sidec) < sidea || (sidec + sidea) < sideb) {
+                JOptionPane.showMessageDialog(null, "This is an invalid triangle!"
+                    + "\nThe sum of two sides must be greater than the third side.");
+            } else {
 
-            JOptionPane.showMessageDialog(null, message);
-            option = JOptionPane.showConfirmDialog(null, "Would you like to run the program again?");
+                if (sidea.equals(sideb) && sideb.equals(sidec)) {
+                    message = "This is an Equilaterial Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
+                } else if ((sidea.equals(sideb) && !sidea.equals(sidec)) || (sidea.equals(sidec) && !sidea.equals(sideb)) || (sideb.equals(sidec) && !sideb.equals(sidea))) {
+                    message = "This is an Isosceles Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
+                } else if (!sidea.equals(sideb) && !sidea.equals(sidec) && !sideb.equals(sidec)) {
+                    message = "This is a Scalene Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
+                }
+                isRightTriangle();
+
+                JOptionPane.showMessageDialog(null, message);
+                option = JOptionPane.showConfirmDialog(null, "Would you like to run the program again?");
+            }
         }
     }
 }

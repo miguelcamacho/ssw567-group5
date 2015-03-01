@@ -98,7 +98,7 @@ public class SSW567_Triangle {
             } else {
 
                 if (sidea.equals(sideb) && sideb.equals(sidec)) {
-                    message = "This is an Equilaterial Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
+                    message = "This is an Equilateral Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
                 } else if ((sidea.equals(sideb) && !sidea.equals(sidec)) || (sidea.equals(sidec) && !sidea.equals(sideb)) || (sideb.equals(sidec) && !sideb.equals(sidea))) {
                     message = "This is an Isosceles Triangle with sides a = " + sidea + ", b = " + sideb + ", and c = " + sidec;
                 } else if (!sidea.equals(sideb) && !sidea.equals(sidec) && !sideb.equals(sidec)) {
